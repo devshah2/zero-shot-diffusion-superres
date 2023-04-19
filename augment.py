@@ -8,7 +8,7 @@ def create_dataset(lr, hr):
     rotateCodes=[cv2.ROTATE_180,
     cv2.ROTATE_90_COUNTERCLOCKWISE,
     cv2.ROTATE_90_CLOCKWISE]
-    images=[(lr,hr)]
+    images=[]
     for rotate in rotateCodes:
         lr_rotated = cv2.rotate(lr, rotate)
         hr_rotated = cv2.rotate(hr, rotate)
