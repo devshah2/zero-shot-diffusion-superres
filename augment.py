@@ -13,4 +13,7 @@ def create_dataset(lr, hr):
         lr_rotated = cv2.rotate(lr, rotate)
         hr_rotated = cv2.rotate(hr, rotate)
         images.append((lr_rotated, hr_rotated))
+        images.append((cv2.flip(lr_rotated,1),cv2.flip(hr_rotated,1)))
+        images.append((cv2.flip(lr_rotated,0),cv2.flip(hr_rotated,0)))
+
     return images
